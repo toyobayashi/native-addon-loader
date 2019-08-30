@@ -1,0 +1,21 @@
+{
+  "name": "native-addon-loader",
+  "version": "2.0.0",
+  "description": "Webpack .node file loader",
+  "main": "index.js",
+  "author": "toyobayashi",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/webpack && node test/dist/js/main"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.3"
+  },
+  "dependencies": {
+    "loader-utils": "^1.2.3"
+  },
+  "repository": {
+    "url": "git+https://github.com/toyobayashi/native-addon-loader.git",
+    "type": "git"
+  }
+}
