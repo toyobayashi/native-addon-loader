@@ -10,7 +10,10 @@ module.exports = function (content) {
     context: loaderOptions.context || this.rootContext || (this.config && this.config.context)
   })
 
-  const requirePath = path.posix.relative(from, name)
+  let requirePath = path.posix.relative(from, name)
+  if (requirePath[0] !== '.') {
+    requirePath = './' + requirePath
+  }
 
   if (typeof this.emitFile === 'function') {
     this.emitFile(name, content, false);
